@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true, // Required for project referencing
+    "noEmit": false, // Must allow emit for composite projects
+    "target": "ES2022",
+    "lib": ["ES2023"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force"
+  },
+  "include": ["vite.config.ts", "vitest.config.ts", "package.json"], // Expanded include for potential config files
+  "exclude": ["node_modules"]
+}

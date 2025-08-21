@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true, // Required for project referencing
+    "noEmit": false, // Must allow emit for composite projects
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "jsx": "react-jsx",
+    "outDir": "./dist", // Optional: Specify output directory for emitted files
+    "rootDir": "./src" // Optional: Specify source root
+  },
+  "include": ["src/**/*"], // Updated to match root include pattern
+  "exclude": ["node_modules"]
+}
